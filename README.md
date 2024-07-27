@@ -1,0 +1,1 @@
+visible-game.py: simplified version of the game where dots assigned with values and types from introductory levels
