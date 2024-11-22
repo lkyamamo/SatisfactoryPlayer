@@ -1,54 +1,29 @@
-width = 128
-height = 128
+# Simple pygame program
 
-#resource types: coal, iron, water, sand, 
-class Resource:
-    def __init__(self, type, value):
-        self.type = type
-        self.value = value
+# Import and initialize the pygame library
+import pygame
+pygame.init()
 
-    def take(self, value):
-        self.value -= value
+# Set up the drawing window
+screen = pygame.display.set_mode([500, 500])
 
-    def add(self, value):
-        self.value += value
+# Run until the user asks to quit
+running = True
+while running:
 
-    def get_value(self):
-        return self.value
-    
-    
-class Map:
-    def __init__(self):
-        self.dimension = (width,height)
+    # Did the user click the window close button?
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
-        #create locations of resources by distribution
-        #total resource value distributed randomly to 5 sites
+    # Fill the background with white
+    screen.fill((255, 255, 255))
 
-        #
+    # Draw a solid blue circle in the center
+    pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
 
-class Player:
-    def __init__(self):
-        self.score = 0
-        self.inventory = {}
-        self.position = (width//2, height//2)
+    # Flip the display
+    pygame.display.flip()
 
-    def extract(self, value):
-        
-
-class Game:
-    def __init__(self):
-        self.playing = True
-        self.map = Map()
-        self.step = 0
-        self.player = Player()
-
-    def play(self):
-        
-        while self.playing:
-
-
-            self.step += 1
-
-
-
-class Event:
+# Done! Time to quit.
+pygame.quit()
