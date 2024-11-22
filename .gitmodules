@@ -1,0 +1,3 @@
+[submodule "brickbreaker-ai/python-brick-breaker"]
+	path = brickbreaker-ai/python-brick-breaker
+	url = https://github.com/lcswillems/python-brick-breaker.git
